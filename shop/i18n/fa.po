@@ -1,0 +1,324 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* shop
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e-20240131\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-03-11 06:18+0000\n"
+"PO-Revision-Date: 2024-03-11 06:18+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: shop
+#: model_terms:ir.ui.view,arch_db:shop.order_form_view
+msgid "All Items"
+msgstr "تمام آیتم ها"
+
+#. module: shop
+#: model_terms:ir.ui.view,arch_db:shop.user_form_view
+msgid "All Orders"
+msgstr "تمام سفارش ها"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.category_action
+#: model:ir.ui.menu,name:shop.new_category_menu
+msgid "Categories"
+msgstr "دسته بندی ها"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.coupon_action
+#: model:ir.ui.menu,name:shop.new_coupon_menu
+msgid "Coupons"
+msgstr "کدهای تخفیف"
+
+#. module: shop
+#: model:ir.model,name:shop.model_coupon
+msgid "Coupons have a percent discount"
+msgstr "هر کوپن شامل درصدی تخفیف می شود"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__create_uid
+#: model:ir.model.fields,field_description:shop.field_coupon__create_uid
+#: model:ir.model.fields,field_description:shop.field_order__create_uid
+#: model:ir.model.fields,field_description:shop.field_order_item__create_uid
+#: model:ir.model.fields,field_description:shop.field_product__create_uid
+#: model:ir.model.fields,field_description:shop.field_user__create_uid
+msgid "Created by"
+msgstr "توسط "
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__create_date
+#: model:ir.model.fields,field_description:shop.field_coupon__create_date
+#: model:ir.model.fields,field_description:shop.field_order__create_date
+#: model:ir.model.fields,field_description:shop.field_order_item__create_date
+#: model:ir.model.fields,field_description:shop.field_product__create_date
+#: model:ir.model.fields,field_description:shop.field_user__create_date
+msgid "Created on"
+msgstr "ایجاد شده در تاریخ"
+
+#. module: shop
+#: model_terms:ir.ui.view,arch_db:shop.category_form_view
+#: model_terms:ir.ui.view,arch_db:shop.coupon_form_view
+#: model_terms:ir.ui.view,arch_db:shop.order_form_view
+#: model_terms:ir.ui.view,arch_db:shop.order_item_form_view
+#: model_terms:ir.ui.view,arch_db:shop.product_form_view
+#: model_terms:ir.ui.view,arch_db:shop.user_form_view
+msgid "Description1"
+msgstr "توضیحات1"
+
+#. module: shop
+#: model_terms:ir.ui.view,arch_db:shop.category_form_view
+#: model_terms:ir.ui.view,arch_db:shop.coupon_form_view
+#: model_terms:ir.ui.view,arch_db:shop.order_item_form_view
+#: model_terms:ir.ui.view,arch_db:shop.product_form_view
+msgid "Description2"
+msgstr "توضیحات 2"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__display_name
+#: model:ir.model.fields,field_description:shop.field_coupon__display_name
+#: model:ir.model.fields,field_description:shop.field_order__display_name
+#: model:ir.model.fields,field_description:shop.field_order_item__display_name
+#: model:ir.model.fields,field_description:shop.field_product__display_name
+#: model:ir.model.fields,field_description:shop.field_user__display_name
+msgid "Display Name"
+msgstr "نام"
+
+#. module: shop
+#: model:ir.model,name:shop.model_order
+msgid "Each order can contian several order item"
+msgstr "هر سفارش شامل چندین آیتم می شود"
+
+#. module: shop
+#: model:ir.model,name:shop.model_category
+msgid "Each product link at least one category"
+msgstr "هر محصول باید حداقل شامل یک دسته باشد"
+
+#. module: shop
+#: model:ir.model.fields.selection,name:shop.selection__user__gender__female
+msgid "Female"
+msgstr "خانم"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__id
+#: model:ir.model.fields,field_description:shop.field_coupon__id
+#: model:ir.model.fields,field_description:shop.field_order__id
+#: model:ir.model.fields,field_description:shop.field_order_item__id
+#: model:ir.model.fields,field_description:shop.field_product__id
+#: model:ir.model.fields,field_description:shop.field_user__id
+msgid "ID"
+msgstr "آی دی"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__write_uid
+#: model:ir.model.fields,field_description:shop.field_coupon__write_uid
+#: model:ir.model.fields,field_description:shop.field_order__write_uid
+#: model:ir.model.fields,field_description:shop.field_order_item__write_uid
+#: model:ir.model.fields,field_description:shop.field_product__write_uid
+#: model:ir.model.fields,field_description:shop.field_user__write_uid
+msgid "Last Updated by"
+msgstr "آخرین به روزرسانی توسط"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__write_date
+#: model:ir.model.fields,field_description:shop.field_coupon__write_date
+#: model:ir.model.fields,field_description:shop.field_order__write_date
+#: model:ir.model.fields,field_description:shop.field_order_item__write_date
+#: model:ir.model.fields,field_description:shop.field_product__write_date
+#: model:ir.model.fields,field_description:shop.field_user__write_date
+msgid "Last Updated on"
+msgstr "آخرین به روزرسانی در تاریخ"
+
+#. module: shop
+#: model:ir.model.fields.selection,name:shop.selection__user__gender__male
+msgid "Male"
+msgstr "آقا"
+
+#. module: shop
+#: model:ir.model,name:shop.model_order_item
+msgid "Order Item"
+msgstr "آیتم سفارشات"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.order_item_action
+#: model:ir.ui.menu,name:shop.new_order_item_menu
+msgid "Order Items"
+msgstr "آیتم های سفارشات"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.order_action
+#: model:ir.ui.menu,name:shop.new_order_menu
+msgid "Orders"
+msgstr "سفارشات"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.product_action
+#: model:ir.ui.menu,name:shop.new_product_menu
+msgid "Products"
+msgstr "محصولات"
+
+#. module: shop
+#: model:ir.model,name:shop.model_product
+msgid "Products of my shop"
+msgstr "محصولات فروشگاه"
+
+#. module: shop
+#: model:ir.ui.menu,name:shop.root_menu
+msgid "Shop"
+msgstr "فروشگاه"
+
+#. module: shop
+#: model:ir.actions.act_window,name:shop.user_action
+#: model:ir.ui.menu,name:shop.new_user_menu
+msgid "Users"
+msgstr "کاربران"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__birth_day
+msgid "birth_day"
+msgstr "تاریخ تولد"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_product__category_id
+#: model:ir.ui.menu,name:shop.category_menu
+msgid "category"
+msgstr "دسته بندی"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_coupon__code
+msgid "code"
+msgstr "کد تخفیف"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__color
+msgid "color"
+msgstr "رنگ"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order__coupon
+#: model:ir.ui.menu,name:shop.coupon_menu
+msgid "coupon"
+msgstr "کوپن تخفیف"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_product__created
+msgid "created_date"
+msgstr "تاریخ ایجاد "
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_product__descriptions
+msgid "description"
+msgstr "توضیحات"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_coupon__discount
+#: model:ir.model.fields,field_description:shop.field_order__discount
+msgid "discount"
+msgstr "درصد تخفیف"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__email
+msgid "email"
+msgstr "ایمیل"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_coupon__expired
+msgid "expired"
+msgstr "تاریخ انقضا"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__gender
+msgid "gender"
+msgstr "جنسیت"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__is_sub
+msgid "is sub category"
+msgstr "آیا دسته بندی فرعی است"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order__is_paid
+msgid "is_paid"
+msgstr "آیا پرداخت شده"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order__items_ids
+msgid "items"
+msgstr "آیتم ها"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__is_mar
+msgid "married"
+msgstr "متاهل"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__name
+#: model:ir.model.fields,field_description:shop.field_product__name
+#: model:ir.model.fields,field_description:shop.field_user__full_name
+msgid "name"
+msgstr "نام"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order_item__order
+#: model:ir.ui.menu,name:shop.order_menu
+msgid "order"
+msgstr "سفارش"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__order_ids
+msgid "orders"
+msgstr "سفارشات "
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_user__phone_number
+msgid "phone_number"
+msgstr "شماره تلفن"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order_item__price
+#: model:ir.model.fields,field_description:shop.field_product__price
+msgid "price"
+msgstr "قیمت"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order_item__product
+#: model:ir.ui.menu,name:shop.product_menu
+msgid "product"
+msgstr "محصول"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order_item__quantity
+msgid "quantity"
+msgstr "تعداد"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_category__sub_category
+msgid "sub category"
+msgstr "دسته بندی فرعی"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order_item__total
+msgid "total"
+msgstr "مجموع"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order__total_price
+msgid "total price"
+msgstr "مجموع قیمت"
+
+#. module: shop
+#: model:ir.model.fields,field_description:shop.field_order__user
+#: model:ir.ui.menu,name:shop.user_menu
+msgid "user"
+msgstr "کاربر"
+
+#. module: shop
+#: model:ir.model,name:shop.model_user
+msgid "users of my shop"
+msgstr "کابران فروشگاه"

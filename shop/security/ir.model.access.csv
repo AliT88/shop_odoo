@@ -1,0 +1,7 @@
+id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+access_user,access_user,shop.model_user,base.group_user,1,1,1,1
+access_product,access_product,shop.model_product,base.group_user,1,1,1,1
+access_order,access_order,shop.model_order,base.group_user,1,1,1,1
+access_coupon,access_coupon,shop.model_coupon,base.group_user,1,1,1,1
+access_order_item,access_order_item,shop.model_order_item,base.group_user,1,1,1,1
+access_category,access_category,shop.model_category,base.group_user,1,1,1,1

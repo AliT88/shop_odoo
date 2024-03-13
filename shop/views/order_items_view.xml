@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="order_item_tree_view" model="ir.ui.view">
+            <field name="name">order.tree</field>
+            <field name="model">order.item</field>
+            <field name="arch" type="xml">
+                <tree editable="bottom">
+                    <field name="product"/> 
+                    <field name="order"/>
+                    <field name="quantity"/>
+                    <field name="price"/>
+                    <field name="total"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="order_item_form_view" model="ir.ui.view">
+            <field name="name">order.item.form</field>
+            <field name="model">order.item</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="product"/>
+                                <field name="quantity"/>
+                            </group>
+
+                            <group>
+                                <field name="order"/>
+                                <field name="total"/>
+                            </group>
+
+                            <notebook>
+                                <page string="Description1">
+                                    <field name="product"/>
+                                    <field name="quantity"/>
+                                </page>
+                                <page string="Description2">
+                                    <field name="order"/>
+                                    <field name="total"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_item_action" model="ir.actions.act_window">
+            <field name="name">Order Items</field>
+            <field name="res_model">order.item</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="order_item_tree_view" />
+        </record>
+    </data>
+</odoo>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="my_person_tree_view" model="ir.ui.view">
+            <field name="name">my_person.tree</field>
+            <field name="model">my_person</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="full_name"/> 
+                    <field name="age"/>
+                    <field name="phone_number"/>
+                    <field name="birth_day"/>
+                    <field name="is_mar"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="my_person_form_view" model="ir.ui.view">
+            <field name="name">my_person.form</field>
+            <field name="model">my_person</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="full_name"/>
+                                <field name="is_mar"/>
+                            </group>
+
+                            <group>
+                                <field name="age"/>
+                                <field name="birth_day"/>
+                                <field name="phone_number"/>
+                            </group>
+
+                            <notebook>
+                                <page string="Description1">
+                                    <field name="is_mar"/>
+                                    <field name="age"/>
+                                </page>
+                                <page string="Description2">
+                                    <field name="full_name"/>
+                                    <field name="phone_number"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="my_person_action" model="ir.actions.act_window">
+            <field name="name">Persons</field>
+            <field name="res_model">my_person</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="my_person_tree_view" />
+        </record>
+    </data>
+</odoo>

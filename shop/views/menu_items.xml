@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <menuitem  id="root_menu" name="Shop" web_icon="shop,static/img/shopping.png">
+
+        <menuitem id="user_menu" name="user">
+            <menuitem id="new_user_menu" action="user_action"/>
+        </menuitem>
+
+        <menuitem id="product_menu" name="product">
+            <menuitem id="new_product_menu" action="product_action"/>
+        </menuitem>
+
+        <menuitem id="category_menu" name="category">
+            <menuitem id="new_category_menu" action="category_action"/>
+        </menuitem>
+
+        <menuitem id="order_menu" name="order">
+            <menuitem id="new_order_menu" action="order_action"/>
+            <menuitem id="new_order_item_menu" action="order_item_action"/>
+        </menuitem>
+
+        <menuitem id="coupon_menu" name="coupon">
+            <menuitem id="new_coupon_menu" action="coupon_action"/>
+        </menuitem>
+
+    </menuitem>
+</odoo>

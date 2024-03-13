@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="order_tree_view" model="ir.ui.view">
+            <field name="name">order.tree</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <tree 
+                decoration-success="is_paid == True"
+                decoration-danger="is_paid == False"                
+                >
+                    <field name="id"/>
+                    <field name="user"/>
+                    <field name="items_ids"/>
+                    <field name="coupon"/>
+                    <field name="discount"/>
+                    <field name="is_paid"/> 
+                    <field name="total_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="order_form_view" model="ir.ui.view">
+            <field name="name">order.form</field>
+            <field name="model">order</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="user"/>
+                                <field name="is_paid"/>
+                            </group>
+
+                            <group>
+                                <field name="coupon"/>
+                                <field name="discount" invisible="not coupon"/>
+                                <field name="total_price" lable="total price:"/>
+                            </group>
+
+                            <notebook>
+                                <page string="Description1">
+                                    <field name="coupon"/>
+                                    <field name="discount"/>
+                                    <field name="is_paid"/>
+                                    <field name="user"/>
+                                </page>
+                                <page string="All Items">
+                                    <field name="total_price"/>
+                                    <field name="items_ids"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="order_action" model="ir.actions.act_window">
+            <field name="name">Orders</field>
+            <field name="res_model">order</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="order_tree_view"/>
+        </record>
+    </data>
+</odoo>

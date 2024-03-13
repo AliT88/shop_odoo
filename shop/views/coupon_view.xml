@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="coupon_tree_view" model="ir.ui.view">
+            <field name="name">coupon.tree</field>
+            <field name="model">coupon</field>
+            <field name="arch" type="xml">
+                <tree 
+                decoration-success="is_active == True" 
+                decoration-danger="is_active == False"
+                >
+                    <field name="code"/> 
+                    <field name="create_date"/>
+                    <field name="expired" widget="remaining_days"/>
+                    <field name="is_active"/>
+                    <field name="discount"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="coupon_form_view" model="ir.ui.view">
+            <field name="name">coupon.form</field>
+            <field name="model">coupon</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                                <field name="discount"/>
+                            </group>
+
+                            <group>
+                                <field name="create_date"/>
+                                <field name="expired"/>
+                            </group>
+
+                            <notebook>
+                                <page string="Description1">
+                                    <field name="code"/>
+                                    <field name="discount"/>
+                                </page>
+                                <page string="Description2">
+                                    <field name="create_date"/>
+                                    <field name="expired"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="coupon_action" model="ir.actions.act_window">
+            <field name="name">Coupons</field>
+            <field name="res_model">coupon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="coupon_tree_view" />
+        </record>
+    </data>
+</odoo>
