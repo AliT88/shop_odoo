@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="factor_tree_view" model="ir.ui.view">
+            <field name="name">factor.tree</field>
+            <field name="model">factor</field>
+            <field name="arch" type="xml">
+                <tree> 
+                    <field name="code"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="factor_form_view" model="ir.ui.view">
+            <field name="name">factor.form</field>
+            <field name="model">factor</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="code"/>
+                            </group>
+
+
+                            <notebook>
+                                <page string="Description1">
+                                    <field name="code"/>
+                                </page>
+                            </notebook>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="factor_action" model="ir.actions.act_window">
+            <field name="name">Factors</field>
+            <field name="res_model">factor</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_id" ref="factor_tree_view" />
+        </record>
+    </data>
+</odoo>

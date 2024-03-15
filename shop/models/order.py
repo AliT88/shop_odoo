@@ -1,4 +1,4 @@
-from odoo import models, fields, api
+from odoo import models, fields, api, _
 from odoo.exceptions import ValidationError
 
 class Order(models.Model):
@@ -11,6 +11,7 @@ class Order(models.Model):
     coupon = fields.Char(string="coupon")
     discount = fields.Integer(compute='_compute_discount', string="discount", default=0, readonly=True, store=True,)
     total_price = fields.Float(compute="_compute_total_price", string="total price", readonly=True, store=True,)
+    factor_id = fields.Many2one('factor', string='Factor')
 
     @api.depends('coupon')
     def _compute_discount(self):
@@ -21,10 +22,10 @@ class Order(models.Model):
                     if data['expired'] > fields.Date.today():
                         record.discount = data['discount']
                     else:
-                        raise ValidationError("Sorry! your coupon is expired.")
+                        raise ValidationError(_("Sorry! your coupon is expired."))
                 else:
                     record.discount = 0
-                    raise ValidationError("Your coupon is wrong")
+                    raise ValidationError(_("Your coupon is wrong"))
             else:
                 record.discount = 0
         
@@ -40,6 +41,13 @@ class Order(models.Model):
             else:
                 record.total_price = s
 
+    # def create(self, vals_list):
+    #     self.env['factor'].create({'code': 1001})
+    #     return super().create(vals_list)
+
+    def final_registration(self):
+        self.is_paid = True
+        self.env['factor'].create({'code': 100})
     
 class OrderItem(models.Model):
     _name = "order.item"

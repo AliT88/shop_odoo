@@ -5,3 +5,4 @@ access_order,access_order,shop.model_order,base.group_user,1,1,1,1
 access_coupon,access_coupon,shop.model_coupon,base.group_user,1,1,1,1
 access_order_item,access_order_item,shop.model_order_item,base.group_user,1,1,1,1
 access_category,access_category,shop.model_category,base.group_user,1,1,1,1
+access_factor,access_factor,shop.model_factor,base.group_user,1,1,1,1

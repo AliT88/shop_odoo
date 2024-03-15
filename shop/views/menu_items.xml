@@ -23,5 +23,9 @@
             <menuitem id="new_coupon_menu" action="coupon_action"/>
         </menuitem>
 
+         <menuitem id="factor_menu" name="factor">
+            <menuitem id="new_factor_menu" action="factor_action"/>
+        </menuitem>
+
     </menuitem>
 </odoo>

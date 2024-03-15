@@ -16,6 +16,7 @@
                     <field name="discount"/>
                     <field name="is_paid"/> 
                     <field name="total_price"/>
+                    <field name="factor_id"/>
                 </tree>
             </field>
         </record>
@@ -25,28 +26,34 @@
             <field name="model">order</field>
             <field name="arch" type="xml">
                 <form>
+                    <header>
+                        <button name="final_registration" type="object" string="final registration" invisible="is_paid"/>
+                      
+                    </header>
+
                     <sheet>
                         <group>
                             <group>
                                 <field name="user"/>
-                                <field name="is_paid"/>
+                                <field name="is_paid" readonly="1"/>
+                                <field name="factor_id"/>
                             </group>
 
                             <group>
                                 <field name="coupon"/>
                                 <field name="discount" invisible="not coupon"/>
-                                <field name="total_price" lable="total price:"/>
+                                <field name="total_price"/>
                             </group>
 
                             <notebook>
                                 <page string="Description1">
                                     <field name="coupon"/>
                                     <field name="discount"/>
-                                    <field name="is_paid"/>
+                                    <field name="is_paid" readonly="1"/>
                                     <field name="user"/>
                                 </page>
                                 <page string="All Items">
-                                    <field name="total_price"/>
+                                    <field name="total_price" lable="total price:"/>
                                     <field name="items_ids"/>
                                 </page>
                             </notebook>
